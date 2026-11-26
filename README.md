@@ -14,6 +14,14 @@ python3 -m http.server 4173
 
 Open [http://localhost:4173](http://localhost:4173). Hover a plate for the description, then open it.
 
+## Deploy on GitHub Pages
+
+The site is static (no build). Pushing to `main` runs [`.github/workflows/pages.yml`](.github/workflows/pages.yml) and publishes GitHub Pages.
+
+1. In the repo on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Push `main` (or run **Actions → Deploy GitHub Pages → Run workflow**).
+3. The site will be at `https://adoralin0.github.io/VoyagerVisualizer/`.
+
 ## Where the skulls come from
 
 `js/specimens.js` lists the taxon models in SkeletalGrowthDB. Each viewer loads that record's `.glb`. Bone colors use the Colors model when the database has one (Aotus107 and Aotus108), matching the part names in that JSON.
